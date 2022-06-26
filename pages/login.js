@@ -1,8 +1,13 @@
 import Head from "next/head"
 import styled from "styled-components"
 import Button from '@mui/material/Button';
+import {auth, provider} from "../firebase";
+import { signInWithPopup, } from "firebase/auth";
 
 function Login() {
+  const signIn = () =>{
+   signInWithPopup(auth, provider).catch(alert);
+  };
   return (
     <Container>
         <Head>
@@ -11,7 +16,7 @@ function Login() {
             <LoginContainer>
                 <Logo src=
 "https://imgs.search.brave.com/YNAt8hFIqpogTCotf09O-Lnn-1Lu_i2EVs6h_T6PqcA/rs:fit:1200:1200:1/g:ce/aHR0cDovL2xvZnJl/di5uZXQvd3AtY29u/dGVudC9waG90b3Mv/MjAxNi8wNi93aGF0/c0FwcC1sb2dvLTEu/cG5n"/>
-<Button variant="outlined">Sign in with Google</Button>
+<Button onClick={signIn} variant="outlined">Sign in with Google</Button>
 
             </LoginContainer>
     </Container>
