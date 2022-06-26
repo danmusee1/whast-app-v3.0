@@ -25,22 +25,22 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;
 
 const Container =styled.div`
 display:grid;
 place-items:center;
 height:100vh;
-background-color:whitesmoke;
+background-color:#0a1014;
 `;
 const LoginContainer= styled.div`
 display:flex;
 padding:100px;
 align-items:center;
-background-color:white;
+background-color:#0a1014;
 flex-direction:column;
 border-radius:9px;
-box-shadow:0px 4px 14px -3px rgba(0,0,0,0.7);
+box-shadow:0px 12px 19px -3px  #05004e;
 `;
 const Logo= styled.img`
 height:100px;

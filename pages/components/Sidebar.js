@@ -3,6 +3,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Avatar,Button, IconButton } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
+import { auth } from '/firebase';
 function Sidebar() {
     const createChat=()=> {
         const input= prompt(
@@ -14,7 +15,7 @@ function Sidebar() {
     
     <Container>
         <Header>
-            <UserAvatar/>
+            <UserAvatar onClick={() => auth.signOut()}/>
         
         <IconContainer>
             <IconButton><ChatIcon/></IconButton>
