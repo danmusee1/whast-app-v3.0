@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
  const [user,loading] =useAuthState(auth);
  useEffect(() => {
   if (user) {
-     setDoc(doc(db,user.uid, "users"),
+     setDoc(doc(db, "users",user.uid),
     {
       email:user.email,
       lastSeen:serverTimestamp(),
